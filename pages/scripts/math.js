@@ -48,3 +48,59 @@ console.log({
 		),
 	},
 });
+
+console.group("Circle");
+
+const circleRadius = 3;
+const calculateCircle = (radius) => {
+	let squareRadius = Math.pow(radius, 2);
+	let diameter = radius * 2;
+	let PI = Math.PI;
+	return {
+		circleRadius,
+		squareRadius,
+		diameter,
+		PI,
+		circunference: diameter * PI,
+		area: squareRadius * PI,
+	};
+};
+
+console.log(calculateCircle(circleRadius));
+console.groupEnd("Circle");
+
+console.group("Isosceles Triangle");
+
+const calculateTriangleIsosceles = (sides, base) => {
+	if (sides !== base) {
+		return Math.sqrt(Math.pow(sides, 2) - Math.pow(base, 2) / 4);
+	} else {
+		console.warn("The triangle is not isosceles");
+	}
+};
+console.log(calculateTriangleIsosceles(6, 4));
+
+console.groupEnd("Isosceles Triangle");
+
+console.group("Scalene Triangle");
+
+const calculateTriangleScalene = (side1, side2, side3) => {
+	const perimeter = side1 + side2 + side3;
+	semiperimeter = perimeter / 2;
+	return {
+		side1,
+		side2,
+		side3,
+		perimeter,
+		semiperimeter,
+		area: Math.sqrt(
+			semiperimeter *
+				(semiperimeter - side1) *
+				(semiperimeter - side2) *
+				(semiperimeter - side3),
+		),
+	};
+};
+
+console.log(calculateTriangleScalene(12, 10, 14));
+console.groupEnd("Scalene Triangle");
