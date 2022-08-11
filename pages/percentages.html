@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="P&aacute;gina web con motivo de enseñanza matem&aacute;tica en JS"
+		/>
+		<meta name="robots" content="index, follow" />
+		<title>Taller Matem&aacute;ticas en JS</title>
+		<link rel="stylesheet" href="../styles/main.css" />
+		<script
+			src="./scripts/percentages.js"
+			type="text/javascript"
+			defer
+		></script>
+	</head>
+	<body>
+		<main class="main__percentages">
+			<h1 class="index__title">
+				Taller Pr&aacute;ctico de JavaScript: Matem&aacute;ticas y Estadística
+				B&aacute;sica
+			</h1>
+			<h2 class="subtitle">Porcentajes y Descuentos</h2>
+			<p class="index__text">
+				Por favor, abre la consola del inspector de elementos para continuar.
+			</p>
+			<section class="percentages__result">
+				<form action="" class="percentages__form">
+					<label for="price">Precio completo</label>
+					<input
+						class="input"
+						min="0"
+						id="price"
+						type="number"
+						placeholder="Escribe el precio"
+						value="100"
+					/>
+					<label for="price">Descuento</label>
+					<input
+						class="input"
+						min="0"
+						max="100"
+						id="discount"
+						type="number"
+						placeholder="Escribe el descuento"
+						value="0"
+					/>
+					<!-- <button id="btnClick" type="button">Calcular precio</button> -->
+				</form>
+				<span id="result"></span>
+			</section>
+		</main>
+	</body>
+</html>
