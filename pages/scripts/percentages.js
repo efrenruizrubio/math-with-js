@@ -1,4 +1,4 @@
-const btn = document.querySelector("#btnClick");
+//const btn = document.querySelector("#btnClick");
 const result = document.querySelector("#result");
 const inputPrice = document.querySelector("#price");
 const inputDiscount = document.querySelector("#discount");
@@ -17,7 +17,11 @@ document.querySelectorAll(".input").forEach((element) => {
 	});
 });
 
-/* inputPrice.addEventListener,
+/* 
+
+Implemented a loop to avoid repeating code
+
+inputPrice.addEventListener,
 	inputDiscount.addEventListener("input", () => {
 		result.innerText = `Precio con descuento: ${calculateDiscount(
 			inputPrice.value,
@@ -25,7 +29,11 @@ document.querySelectorAll(".input").forEach((element) => {
 		)}`;
 	}); */
 
-/* btn.addEventListener("click", () => {
+/* 
+
+Without button to make it dynamic
+
+btn.addEventListener("click", () => {
 	result.innerText = `Precio con descuento: ${calculateDiscount(
 		inputPrice.value,
 		inputDiscount.value,
