@@ -76,8 +76,13 @@ body {
 	flex-direction: column;
 }
 
-.percentages__form input[type="number"] {
+.input {
 	margin-bottom: 1rem;
+}
+
+.error {
+	border: 1px solid red;
+	outline: none;
 }
 
 #btnClick {

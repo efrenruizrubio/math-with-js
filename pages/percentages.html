@@ -29,7 +29,7 @@
 			</p>
 			<section class="percentages__result">
 				<form action="" class="percentages__form">
-					<label for="price">Precio completo</label>
+					<label for="price">Precio completo:</label>
 					<input
 						class="input"
 						min="0"
@@ -38,7 +38,7 @@
 						placeholder="Escribe el precio"
 						value="100"
 					/>
-					<label for="price">Descuento</label>
+					<!-- <label for="discount">Descuento:</label>
 					<input
 						class="input"
 						min="0"
@@ -47,8 +47,15 @@
 						type="number"
 						placeholder="Escribe el descuento"
 						value="0"
+					/> -->
+					<label for="discount">Código de descuento:</label>
+					<input
+						class="input"
+						id="discount"
+						type="text"
+						placeholder="Escribe el código"
 					/>
-					<!-- <button id="btnClick" type="button">Calcular precio</button> -->
+					<button id="btnClick" type="button">Calcular precio</button>
 				</form>
 				<span id="result"></span>
 			</section>
