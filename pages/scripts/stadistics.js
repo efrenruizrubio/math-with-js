@@ -56,7 +56,7 @@ Stadistics.calculateModal = (arr) => {
 	arr.map((el) => {
 		el in obj ? (obj[el] += 1) : (obj[el] = 1);
 	});
-	console.log(Math.max(...Object.values(obj)));
+	return Math.max(...Object.values(obj));
 };
 
 Stadistics.calculateArithmeticAverage = (arr) => {

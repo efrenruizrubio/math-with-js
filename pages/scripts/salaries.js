@@ -1,7 +1,7 @@
 const salaries = [
 	{
 		name: "Juanita",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Freelance", salary: 250 },
 			{ year: 2019, company: "Freelance", salary: 250 },
 			{ year: 2020, company: "Industrias Mokepon", salary: 850 },
@@ -12,7 +12,7 @@ const salaries = [
 	},
 	{
 		name: "Alex",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Freelance", salary: 450 },
 			{ year: 2019, company: "Freelance", salary: 550 },
 			{ year: 2020, company: "Freelance", salary: 400 },
@@ -23,7 +23,7 @@ const salaries = [
 	},
 	{
 		name: "Nath",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Freelance", salary: 600 },
 			{ year: 2019, company: "Freelance", salary: 625 },
 			{ year: 2020, company: "Freelance", salary: 575 },
@@ -34,7 +34,7 @@ const salaries = [
 	},
 	{
 		name: "Julia",
-		works: [
+		jobs: [
 			{ year: 2018, company: "MarketerosCOL", salary: 1000 },
 			{ year: 2019, company: "MarketerosCOL", salary: 2000 },
 			{ year: 2020, company: "MarketerosCOL", salary: 2000 },
@@ -45,7 +45,7 @@ const salaries = [
 	},
 	{
 		name: "Jonatan",
-		works: [
+		jobs: [
 			{ year: 2019, company: "MarketerosCOL", salary: 1000 },
 			{ year: 2020, company: "MarketerosCOL", salary: 1000 },
 			{ year: 2021, company: "MarketerosCOL", salary: 800 },
@@ -55,7 +55,7 @@ const salaries = [
 	},
 	{
 		name: "Armando",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Freelance", salary: 750 },
 			{ year: 2019, company: "Freelance", salary: 750 },
 			{ year: 2020, company: "Freelance", salary: 750 },
@@ -66,7 +66,7 @@ const salaries = [
 	},
 	{
 		name: "Dilan",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Freelance", salary: 500 },
 			{ year: 2019, company: "Freelance", salary: 500 },
 			{ year: 2020, company: "Freelance", salary: 600 },
@@ -77,7 +77,7 @@ const salaries = [
 	},
 	{
 		name: "Zamir",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Freelance", salary: 400 },
 			{ year: 2019, company: "Freelance", salary: 500 },
 			{ year: 2020, company: "Freelance", salary: 500 },
@@ -88,7 +88,7 @@ const salaries = [
 	},
 	{
 		name: "Daniela",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Freelance", salary: 500 },
 			{ year: 2019, company: "Freelance", salary: 500 },
 			{ year: 2020, company: "Freelance", salary: 500 },
@@ -99,7 +99,7 @@ const salaries = [
 	},
 	{
 		name: "Daniel",
-		works: [
+		jobs: [
 			{ year: 2020, company: "Freelance", salary: 150 },
 			{ year: 2021, company: "Freelance", salary: 450 },
 			{ year: 2022, company: "Freelance", salary: 550 },
@@ -108,7 +108,7 @@ const salaries = [
 	},
 	{
 		name: "Rigoberto",
-		works: [
+		jobs: [
 			{ year: 2018, company: "MarketerosCOL", salary: 700 },
 			{ year: 2019, company: "MarketerosCOL", salary: 700 },
 			{ year: 2020, company: "MarketerosCOL", salary: 700 },
@@ -119,7 +119,7 @@ const salaries = [
 	},
 	{
 		name: "Alicia",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Inversionify", salary: 300 },
 			{ year: 2019, company: "Inversionify", salary: 1700 },
 			{ year: 2020, company: "Inversionify", salary: 2700 },
@@ -130,7 +130,7 @@ const salaries = [
 	},
 	{
 		name: "Teodoro",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Freelance", salary: 600 },
 			{ year: 2019, company: "Freelance", salary: 700 },
 			{ year: 2020, company: "Inversionify", salary: 1700 },
@@ -141,7 +141,7 @@ const salaries = [
 	},
 	{
 		name: "Bruce",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Wayne Enterprises", salary: 4600 },
 			{ year: 2019, company: "Wayne Enterprises", salary: 4700 },
 			{ year: 2020, company: "Wayne Enterprises", salary: 3700 },
@@ -152,7 +152,7 @@ const salaries = [
 	},
 	{
 		name: "Alfred",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Wayne Enterprises", salary: 2000 },
 			{ year: 2019, company: "Wayne Enterprises", salary: 2000 },
 			{ year: 2020, company: "Wayne Enterprises", salary: 1500 },
@@ -163,7 +163,7 @@ const salaries = [
 	},
 	{
 		name: "Clark Kent",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Daily Planet", salary: 1000 },
 			{ year: 2019, company: "Daily Planet", salary: 1500 },
 			{ year: 2020, company: "Daily Planet", salary: 1000 },
@@ -174,7 +174,7 @@ const salaries = [
 	},
 	{
 		name: "Lois Lane",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Daily Planet", salary: 2000 },
 			{ year: 2019, company: "Daily Planet", salary: 2500 },
 			{ year: 2020, company: "Daily Planet", salary: 2000 },
@@ -185,7 +185,7 @@ const salaries = [
 	},
 	{
 		name: "Jimmy Olsen",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Daily Planet", salary: 1500 },
 			{ year: 2019, company: "Daily Planet", salary: 2000 },
 			{ year: 2020, company: "Daily Planet", salary: 2000 },
@@ -196,7 +196,7 @@ const salaries = [
 	},
 	{
 		name: "Perry White",
-		works: [
+		jobs: [
 			{ year: 2018, company: "Daily Planet", salary: 3500 },
 			{ year: 2019, company: "Daily Planet", salary: 3700 },
 			{ year: 2020, company: "Daily Planet", salary: 3800 },
@@ -207,7 +207,7 @@ const salaries = [
 	},
 	{
 		name: "Lex Luthor",
-		works: [
+		jobs: [
 			{ year: 2018, company: "LexCorp", salary: 5000 },
 			{ year: 2019, company: "LexCorp", salary: 5300 },
 			{ year: 2020, company: "LexCorp", salary: 4000 },
@@ -218,6 +218,24 @@ const salaries = [
 	},
 ];
 
-const FindPerson = (name) => {
+const findPersonByName = (name) => {
 	return salaries.find((person) => person.name === name);
 };
+
+const medianPerPerson = (personName) => {
+	const jobs = findPersonByName(personName).jobs.map((el) => el.salary);
+	const median = Stadistics.calculateMedian(jobs);
+	console.log(median);
+};
+
+const proyectionSalaryPerPerson = (personName) => {
+	const jobs = findPersonByName(personName).jobs.map((el) => el.salary);
+	const latestSalary = jobs[jobs.length - 1];
+	const percentages = jobs
+		.map((el, i) => (i ? (el - jobs[i - 1]) / jobs[i - 1] : 0))
+		.splice(1);
+
+	const increase = Stadistics.calculateMedian(percentages) * latestSalary;
+	return latestSalary + increase;
+};
+
