@@ -238,4 +238,21 @@ const proyectionSalaryPerPerson = (personName) => {
 	const increase = Stadistics.calculateMedian(percentages) * latestSalary;
 	return latestSalary + increase;
 };
+const companies = {};
+salaries.map((person) =>
+	person.jobs.map((job) =>
+		job.company in companies
+			? job.year in companies[job.company]
+				? companies[job.company][job.year].push(job.salary)
+				: (companies[job.company][job.year] = [])
+			: (companies[job.company] = {}),
+	),
+);
 
+const calculateMedianPerYear = (companyName, year) => {
+	return companyName in companies
+		? year in companies[companyName]
+			? Stadistics.calculateMedian(companies[companyName][year])
+			: "El año ingresado no tiene registro en la empresa."
+		: "El nombre de la empresa no se encuentra registrado.";
+};
