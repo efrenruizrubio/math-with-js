@@ -238,16 +238,16 @@ const proyectionSalaryPerPerson = (personName) => {
 	const increase = Stadistics.calculateMedian(percentages) * latestSalary;
 	return latestSalary + increase;
 };
+
 const companies = {};
-salaries.map((person) =>
-	person.jobs.map((job) =>
-		job.company in companies
-			? job.year in companies[job.company]
-				? companies[job.company][job.year].push(job.salary)
-				: (companies[job.company][job.year] = [])
-			: (companies[job.company] = {}),
-	),
-);
+salaries.map((person) => {
+	return person.jobs.map((item) => {
+		if (!companies[item.company]) companies[item.company] = {};
+		if (!companies[item.company][item.year])
+			companies[item.company][item.year] = [];
+		companies[item.company][item.year].push(item.salary);
+	});
+});
 
 const calculateMedianPerYear = (companyName, year) => {
 	return companyName in companies
@@ -255,4 +255,23 @@ const calculateMedianPerYear = (companyName, year) => {
 			? Stadistics.calculateMedian(companies[companyName][year])
 			: "El año ingresado no tiene registro en la empresa."
 		: "El nombre de la empresa no se encuentra registrado.";
+};
+
+const proyectionSalaryPerCompany = (companyName) => {
+	if (companies[companyName]) {
+		const list = Object.keys(companies[companyName]);
+		const medianPerYear = list.map((el) => {
+			return calculateMedianPerYear(companyName, el);
+		});
+
+		const latestSalary = medianPerYear[medianPerYear.length - 1];
+		const percentages = medianPerYear
+			.map((el, i) =>
+				i ? (el - medianPerYear[i - 1]) / medianPerYear[i - 1] : 0,
+			)
+			.splice(1);
+
+		const increase = Stadistics.calculateMedian(percentages) * latestSalary;
+		return latestSalary + increase;
+	} else console.warn("El nombre de la empresa no se encuentra registrado.");
 };
