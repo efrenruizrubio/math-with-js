@@ -21,5 +21,25 @@
 			B&aacute;sica
 		</h1>
 		<h2 class="subtitle">An&aacute;lisis Salarial</h2>
+		<form action="">
+			<legend for="salaries-input">Selecciona un filtro de salarios:</legend>
+			<input
+				type="radio"
+				id="percentage-bottom"
+				value="percentage-bottom"
+				name="percentage"
+				class="percentage__input"
+			/>
+			<label for="percentage-bottom">10% menor</label>
+			<input
+				type="radio"
+				id="percentage-top"
+				value="percentage-top"
+				name="percentage"
+				class="percentage__input"
+			/>
+			<label for="percentage-top">10% mayor</label>
+		</form>
+		<p id="result"></p>
 	</body>
 </html>

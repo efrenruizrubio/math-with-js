@@ -1,3 +1,7 @@
+const optionSalary = document.querySelectorAll(".percentage__input");
+const result = document.querySelector("#result");
+const calculation = document.querySelector("#calculation");
+
 const salaries = [
 	{
 		name: "Juanita",
@@ -275,3 +279,67 @@ const proyectionSalaryPerCompany = (companyName) => {
 		return latestSalary + increase;
 	} else console.warn("El nombre de la empresa no se encuentra registrado.");
 };
+
+const obtainAllSalaries = () => {
+	const allSalaries = [];
+	Object.values(companies).forEach((el) => {
+		Object.values(el).forEach((salary) => {
+			salary.forEach((singleElement) => {
+				if (!allSalaries.includes(singleElement))
+					allSalaries.push(singleElement);
+			});
+		});
+	});
+	return allSalaries.sort((a, b) => {
+		return a - b;
+	});
+};
+
+const createSalaryList = (arr, list) => {
+	console.log(arr);
+	list = document.createElement("ol");
+	arr.forEach((el) => {
+		let item = document.createElement("li");
+		item.innerText = el;
+		list.appendChild(item);
+	});
+	return list;
+};
+
+const topSalariesGlobal = () => {
+	const tenTop = [];
+	const tenBottom = [];
+	const allSalaries = obtainAllSalaries();
+	const length = allSalaries.length;
+	result.innerText = `Los salarios más ${
+		optionSalary[0].checked
+			? "bajos son: "
+			: optionSalary[1].checked
+			? "altos son: "
+			: ""
+	}`;
+	const salariesList = document.createElement("ol");
+	console.log(salariesList);
+	const tenPercent = Math.ceil(length * 0.1);
+	if (optionSalary[0].checked) {
+		for (let i = 0; i < tenPercent; i++) {
+			tenBottom.push(allSalaries[i]);
+		}
+	} else if (optionSalary[1].checked) {
+		for (let i = length - 1; i >= length - tenPercent; i--) {
+			tenTop.push(allSalaries[i]);
+		}
+	}
+
+	if (optionSalary[0].checked) {
+		const list = createSalaryList(tenBottom, salariesList);
+		result.insertAdjacentElement("afterend", list);
+	} else if (optionSalary[1].checked) {
+		const list = createSalaryList(tenTop.reverse(), salariesList);
+		result.insertAdjacentElement("afterend", list);
+	}
+};
+
+optionSalary.forEach((input) => {
+	input.addEventListener("input", topSalariesGlobal);
+});
